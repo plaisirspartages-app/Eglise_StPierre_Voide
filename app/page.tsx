@@ -1,69 +1,102 @@
-import Image from "next/image";
+import Link from "next/link";
+import { saints } from "@/data/saints";
+import SaintCard from "@/components/SaintCard";
 
 export default function Home() {
+  const featured = saints.slice(0, 4);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div>
+      {/* Hero */}
+      <section className="bg-gradient-to-b from-amber-900 to-amber-800 text-white text-center py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-6xl mb-4">✝</div>
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold mb-3">
+            Église Saint-Pierre
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="text-amber-200 text-xl mb-1">du Voide — 49310</p>
+          <p className="text-amber-300 mt-4 text-lg max-w-xl mx-auto">
+            Découvrez les saints qui veillent sur notre paroisse et testez vos connaissances avec nos jeux.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
+            <Link
+              href="/saints"
+              className="bg-white text-amber-900 font-semibold px-6 py-3 rounded-full hover:bg-amber-100 transition-colors shadow"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              🙏 Découvrir les Saints
+            </Link>
+            <Link
+              href="/jeux"
+              className="bg-amber-700 border border-amber-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-amber-600 transition-colors shadow"
             >
-              Learning
-            </a>{" "}
-            center.
+              🎮 Jouer & Apprendre
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Présentation */}
+      <section className="max-w-4xl mx-auto px-4 py-12">
+        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8 text-center">
+          <h2 className="font-serif text-2xl font-bold text-amber-900 mb-3">
+            Bienvenue sur le site de notre église
+          </h2>
+          <p className="text-amber-800 leading-relaxed max-w-2xl mx-auto">
+            L'église Saint-Pierre du Voide est un lieu de foi ancré dans la commune du Voide,
+            aujourd'hui intégrée à Lys-Haut-Layon (Maine-et-Loire). Ce site vous invite à
+            découvrir les saints qui ornent notre église à travers leurs histoires et leur message,
+            et à jouer pour en apprendre davantage sur notre foi.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Saints en vedette */}
+      <section className="max-w-5xl mx-auto px-4 pb-8">
+        <h2 className="font-serif text-2xl font-bold text-amber-900 mb-6 text-center">
+          Quelques saints de notre église
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          {featured.map(saint => (
+            <SaintCard key={saint.slug} saint={saint} />
+          ))}
         </div>
-      </main>
+        <div className="text-center">
+          <Link
+            href="/saints"
+            className="inline-block bg-amber-800 text-white font-semibold px-8 py-3 rounded-full hover:bg-amber-700 transition-colors shadow"
+          >
+            Voir tous les {saints.length} saints →
+          </Link>
+        </div>
+      </section>
+
+      {/* Jeux */}
+      <section className="bg-amber-900 text-white py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-2xl font-bold mb-3">Jeux & Quiz</h2>
+          <p className="text-amber-200 mb-8">
+            Quatre jeux pour apprendre en s'amusant — seul ou contre la machine !
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { emoji: "❓", label: "Quiz classique", desc: "3 niveaux", href: "/jeux/quiz" },
+              { emoji: "⚔️", label: "Contre la machine", desc: "Duel de questions", href: "/jeux/contre-machine" },
+              { emoji: "🃏", label: "Memory", desc: "Retrouvez les paires", href: "/jeux/memoire" },
+              { emoji: "🔤", label: "Pendu", desc: "Devinez le saint", href: "/jeux/pendu" },
+            ].map(jeu => (
+              <Link
+                key={jeu.href}
+                href={jeu.href}
+                className="flex flex-col items-center gap-2 bg-amber-800 hover:bg-amber-700 rounded-xl p-4 transition-colors"
+              >
+                <span className="text-3xl">{jeu.emoji}</span>
+                <span className="font-bold text-sm">{jeu.label}</span>
+                <span className="text-amber-300 text-xs">{jeu.desc}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
