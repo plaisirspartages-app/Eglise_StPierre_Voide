@@ -113,8 +113,8 @@ export default function Home() {
       </section>
 
       {/* ── STATS ────────────────────────────────────────────── */}
-      <section style={{ background: "#d4a843" }}>
-        <div className="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-8 text-amber-900">
+      <section style={{ background: "#3a6e49" }}>
+        <div className="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-8 text-green-50">
           {[
             { n: "13", label: "Saints" },
             { n: "4",  label: "Jeux" },
@@ -123,7 +123,7 @@ export default function Home() {
           ].map(s => (
             <div key={s.label} className="flex items-center gap-2">
               <span className="font-serif font-bold text-2xl">{s.n}</span>
-              <span className="text-amber-800 text-sm font-medium">{s.label}</span>
+              <span className="text-green-200 text-sm font-medium">{s.label}</span>
             </div>
           ))}
         </div>
@@ -208,7 +208,7 @@ export default function Home() {
             <Link
               href="/saints"
               className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full shadow transition-all hover:-translate-y-0.5"
-              style={{ background: "#7c3a00", color: "#fff" }}
+              style={{ background: "#1b3d2a", color: "#fff" }}
             >
               Voir les {saints.length} saints →
             </Link>
@@ -219,13 +219,13 @@ export default function Home() {
       {/* ── JEUX ─────────────────────────────────────────────── */}
       <section
         className="py-14 px-4"
-        style={{ background: "linear-gradient(160deg, #4a1a00 0%, #5c2e00 100%)" }}
+        style={{ background: "linear-gradient(160deg, #0e2a1a 0%, #1b3d2a 100%)" }}
       >
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
-            <p className="text-amber-500 text-xs tracking-[0.3rem] uppercase mb-2">Apprendre en jouant</p>
+            <p className="text-green-400 text-xs tracking-[0.3rem] uppercase mb-2">Apprendre en jouant</p>
             <h2 className="font-serif text-3xl font-bold text-white mb-2">Jeux & Quiz</h2>
-            <p className="text-amber-300">
+            <p className="text-green-300">
               Pour toute la famille — seul ou contre la machine !
             </p>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link
               href="/jeux"
-              className="inline-flex items-center gap-2 text-amber-300 hover:text-amber-100 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-green-300 hover:text-green-100 transition-colors text-sm"
             >
               Voir tous les jeux →
             </Link>

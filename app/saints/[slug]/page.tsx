@@ -95,7 +95,7 @@ export default async function SaintPage({ params }: { params: Promise<{ slug: st
       </section>
 
       {/* Prière */}
-      <section className="mb-8 bg-gradient-to-br from-amber-800 to-amber-900 text-white rounded-2xl p-6">
+      <section className="mb-8 text-white rounded-2xl p-6" style={{ background: "linear-gradient(135deg, #1b3d2a, #2d6a3f)" }}>
         <h2 className="font-serif text-xl font-bold mb-3">Prière</h2>
         <blockquote className="italic leading-relaxed text-amber-100 border-l-4 border-amber-500 pl-4">
           {saint.prayer}

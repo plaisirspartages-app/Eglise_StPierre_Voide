@@ -14,9 +14,9 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-amber-900 text-amber-50 shadow-lg">
+    <nav style={{ background: "#1b3d2a" }} className="text-green-50 shadow-lg">
       <div className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-serif text-lg font-bold tracking-wide hover:text-amber-200 transition-colors">
+        <Link href="/" className="flex items-center gap-2 font-serif text-lg font-bold tracking-wide hover:text-green-200 transition-colors">
           <span className="text-2xl">✝</span>
           <span className="hidden sm:inline">Église du Voide</span>
           <span className="sm:hidden">Voide</span>
@@ -30,9 +30,14 @@ export default function Navigation() {
               href={l.href}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href))
-                  ? "bg-amber-700 text-white"
-                  : "hover:bg-amber-800 text-amber-100"
+                  ? "text-white"
+                  : "text-green-100"
               }`}
+              style={
+                pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href))
+                  ? { background: "#2d6a3f" }
+                  : undefined
+              }
             >
               {l.label}
             </Link>
@@ -41,18 +46,18 @@ export default function Navigation() {
 
         {/* Mobile burger */}
         <button
-          className="sm:hidden p-2 rounded-md hover:bg-amber-800 transition-colors"
+          className="sm:hidden p-2 rounded-md transition-colors"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          <div className="w-5 h-0.5 bg-amber-50 mb-1" />
-          <div className="w-5 h-0.5 bg-amber-50 mb-1" />
-          <div className="w-5 h-0.5 bg-amber-50" />
+          <div className="w-5 h-0.5 bg-green-50 mb-1" />
+          <div className="w-5 h-0.5 bg-green-50 mb-1" />
+          <div className="w-5 h-0.5 bg-green-50" />
         </button>
       </div>
 
       {open && (
-        <div className="sm:hidden border-t border-amber-700 px-4 pb-3 flex flex-col gap-1">
+        <div className="sm:hidden px-4 pb-3 flex flex-col gap-1" style={{ borderTop: "1px solid #2d6a3f" }}>
           {links.map(l => (
             <Link
               key={l.href}
@@ -60,9 +65,14 @@ export default function Navigation() {
               onClick={() => setOpen(false)}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href))
-                  ? "bg-amber-700 text-white"
-                  : "hover:bg-amber-800 text-amber-100"
+                  ? "text-white"
+                  : "text-green-100"
               }`}
+              style={
+                pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href))
+                  ? { background: "#2d6a3f" }
+                  : undefined
+              }
             >
               {l.label}
             </Link>
