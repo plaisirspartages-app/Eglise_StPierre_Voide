@@ -10,6 +10,8 @@ export interface Saint {
   prayer: string;
   color: string;
   emoji: string;
+  image: string;
+  imageCredit: string;
 }
 
 export const saints: Saint[] = [
@@ -29,7 +31,9 @@ export const saints: Saint[] = [
     symbol: "Croix et poisson (ichthus)",
     prayer: "Seigneur Jésus, tu es le chemin, la vérité et la vie. Guide nos pas sur la route qui mène au Père. Amen.",
     color: "from-amber-700 to-amber-900",
-    emoji: "✝️"
+    emoji: "✝️",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Salvator_Mundi%2C_Leonardo_da_Vinci%2C_circa_1500.jpg/320px-Salvator_Mundi%2C_Leonardo_da_Vinci%2C_circa_1500.jpg",
+    imageCredit: "Léonard de Vinci, vers 1500 — Domaine public"
   },
   {
     slug: "vierge-marie",
@@ -47,7 +51,9 @@ export const saints: Saint[] = [
     symbol: "Lys blanc et étoile",
     prayer: "Je vous salue Marie, pleine de grâce, le Seigneur est avec vous. Vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l'heure de notre mort. Amen.",
     color: "from-blue-600 to-blue-900",
-    emoji: "🌹"
+    emoji: "🌹",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tempi_Madonna_-_Raphael.jpg/320px-Tempi_Madonna_-_Raphael.jpg",
+    imageCredit: "Raphaël, Tempi Madonna, 1508 — Domaine public"
   },
   {
     slug: "notre-dame-lourdes",
@@ -65,7 +71,9 @@ export const saints: Saint[] = [
     symbol: "Source miraculeuse et grotte",
     prayer: "Notre-Dame de Lourdes, toi qui t'es révélée comme l'Immaculée Conception, intercède pour nous auprès de ton Fils. Guéris nos corps et nos âmes, et donne-nous la foi de Bernadette. Amen.",
     color: "from-sky-500 to-sky-800",
-    emoji: "💧"
+    emoji: "💧",
+    image: "/saints/notre-dame-lourdes.jpg",
+    imageCredit: "Virgilio Tojetti, 1877 — Domaine public"
   },
   {
     slug: "saint-antoine-padoue",
@@ -83,7 +91,9 @@ export const saints: Saint[] = [
     symbol: "Lys et Enfant Jésus",
     prayer: "Saint Antoine, toi qui es invoqué pour retrouver ce qui est perdu, aide-moi à ne jamais perdre la foi ni l'espérance. Intercède pour les pauvres et les oubliés. Amen.",
     color: "from-orange-600 to-orange-900",
-    emoji: "📖"
+    emoji: "📖",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AntoniusGreco17.jpg/320px-AntoniusGreco17.jpg",
+    imageCredit: "El Greco, vers 1580 — Domaine public"
   },
   {
     slug: "saint-christophe",
@@ -101,7 +111,9 @@ export const saints: Saint[] = [
     symbol: "Bâton et fleuve",
     prayer: "Saint Christophe, toi qui portas le Christ sur tes épaules, garde-moi sur les routes et protège tous les voyageurs du monde. Amen.",
     color: "from-green-600 to-green-900",
-    emoji: "🚗"
+    emoji: "🚗",
+    image: "/saints/saint-christophe.jpg",
+    imageCredit: "Joachim Patinir, vers 1520 — Domaine public"
   },
   {
     slug: "saint-jean-baptiste",
@@ -119,7 +131,9 @@ export const saints: Saint[] = [
     symbol: "Agneau de Dieu et bannière",
     prayer: "Saint Jean Baptiste, toi qui as crié dans le désert 'Préparez les chemins du Seigneur', aide-nous à nous convertir et à accueillir le Christ dans nos cœurs. Amen.",
     color: "from-yellow-600 to-yellow-900",
-    emoji: "🐑"
+    emoji: "🐑",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Caravage_-_Saint_Jean_Baptiste.jpg/320px-Caravage_-_Saint_Jean_Baptiste.jpg",
+    imageCredit: "Caravage, 1594–1595 — Domaine public"
   },
   {
     slug: "saint-pierre",
@@ -137,7 +151,9 @@ export const saints: Saint[] = [
     symbol: "Clés croisées et coq",
     prayer: "Saint Pierre, toi qui gardes les portes du Royaume et qui fus le roc de l'Église, affermis notre foi vacillante comme Jésus a affermi la tienne. Amen.",
     color: "from-slate-500 to-slate-800",
-    emoji: "🗝️"
+    emoji: "🗝️",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/El_Greco_-_St._Peter_-_Google_Art_Project.jpg/320px-El_Greco_-_St._Peter_-_Google_Art_Project.jpg",
+    imageCredit: "El Greco — Domaine public"
   },
   {
     slug: "saint-louis",
@@ -155,7 +171,9 @@ export const saints: Saint[] = [
     symbol: "Couronne et lys de France",
     prayer: "Saint Louis, roi de justice et de charité, toi qui as gouverné ton peuple avec sagesse et humilité, intercède pour nos gouvernants et pour la France. Amen.",
     color: "from-purple-600 to-purple-900",
-    emoji: "👑"
+    emoji: "👑",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Saint_Louis_IX_by_El_Greco.jpg/320px-Saint_Louis_IX_by_El_Greco.jpg",
+    imageCredit: "El Greco, vers 1590 — Domaine public"
   },
   {
     slug: "jeanne-arc",
@@ -173,7 +191,9 @@ export const saints: Saint[] = [
     symbol: "Épée et étendard fleurdelisé",
     prayer: "Sainte Jeanne d'Arc, toi qui as tout donné par amour de ta foi et de ta patrie, donne-nous le courage de défendre la vérité face à l'injustice. Amen.",
     color: "from-red-600 to-red-900",
-    emoji: "⚔️"
+    emoji: "⚔️",
+    image: "/saints/jeanne-arc.jpg",
+    imageCredit: "Albert Lynch, 1903 — Domaine public"
   },
   {
     slug: "saint-joseph",
@@ -191,7 +211,9 @@ export const saints: Saint[] = [
     symbol: "Lys et équerre de charpentier",
     prayer: "Saint Joseph, gardien silencieux de Jésus et Marie, protège nos familles, soutiens les travailleurs et assiste-nous à l'heure de notre mort. Amen.",
     color: "from-stone-500 to-stone-800",
-    emoji: "🔨"
+    emoji: "🔨",
+    image: "/saints/saint-joseph.jpg",
+    imageCredit: "Murillo, vers 1670–1675 — Domaine public"
   },
   {
     slug: "sainte-anne",
@@ -209,7 +231,9 @@ export const saints: Saint[] = [
     symbol: "Livre et enfant Marie",
     prayer: "Sainte Anne, toi qui as éduqué Marie avec tant d'amour et de foi, aide tous les parents et grands-parents à transmettre la foi à leurs enfants et petits-enfants. Amen.",
     color: "from-rose-600 to-rose-900",
-    emoji: "📿"
+    emoji: "📿",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/La_Vierge%2C_l%27Enfant_J%C3%A9sus_et_sainte_Anne%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg/320px-La_Vierge%2C_l%27Enfant_J%C3%A9sus_et_sainte_Anne%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg",
+    imageCredit: "Léonard de Vinci, 1503–1519 — Domaine public"
   },
   {
     slug: "sainte-therese-lisieux",
@@ -227,7 +251,9 @@ export const saints: Saint[] = [
     symbol: "Rose et croix",
     prayer: "Sainte Thérèse de l'Enfant-Jésus, enseigne-nous ta petite voie de la confiance et de l'amour, et répands sur nous ta pluie de roses du ciel. Amen.",
     color: "from-pink-500 to-pink-800",
-    emoji: "🌺"
+    emoji: "🌺",
+    image: "/saints/sainte-therese.jpg",
+    imageCredit: "Photo de Céline Martin, 1895 — Domaine public"
   },
   {
     slug: "saint-benoit",
@@ -245,7 +271,9 @@ export const saints: Saint[] = [
     symbol: "Règle et calice brisé",
     prayer: "Saint Benoît, toi qui as centré ta vie sur Dieu et organisé le monde autour de la prière et du travail, aide-nous à mettre Dieu au cœur de notre quotidien. Amen.",
     color: "from-gray-600 to-gray-900",
-    emoji: "📜"
+    emoji: "📜",
+    image: "/saints/saint-benoit.png",
+    imageCredit: "Maso da San Friano, XVIe siècle — Domaine public"
   }
 ];
 

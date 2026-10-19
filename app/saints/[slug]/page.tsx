@@ -1,6 +1,7 @@
 import { saints, getSaintBySlug } from "@/data/saints";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export function generateStaticParams() {
   return saints.map(s => ({ slug: s.slug }));
@@ -32,13 +33,25 @@ export default async function SaintPage({ params }: { params: Promise<{ slug: st
       </Link>
 
       {/* En-tête */}
-      <div className={`rounded-3xl bg-gradient-to-br ${saint.color} text-white p-8 mb-8 relative overflow-hidden`}>
-        <div className="absolute top-4 right-6 text-8xl opacity-10 select-none">{saint.emoji}</div>
-        <div className="text-5xl mb-3">{saint.emoji}</div>
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold mb-1">{saint.name}</h1>
-        <p className="text-white/80 text-lg">{saint.subtitle}</p>
-        <div className="mt-4 flex flex-wrap gap-2">
+      <div className={`rounded-3xl bg-gradient-to-br ${saint.color} text-white mb-8 overflow-hidden`}>
+        <div className="relative w-full h-64 sm:h-80">
+          <Image
+            src={saint.image}
+            alt={saint.name}
+            fill
+            className="object-cover"
+            unoptimized={saint.image.startsWith("http")}
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <h1 className="font-serif text-3xl sm:text-4xl font-bold mb-1 drop-shadow">{saint.name}</h1>
+            <p className="text-white/90 text-base drop-shadow">{saint.subtitle}</p>
+          </div>
+        </div>
+        <div className="px-6 py-3 flex flex-wrap gap-2 items-center">
           <span className="bg-white/20 rounded-full px-3 py-1 text-sm">🗓 {saint.feastDate}</span>
+          <span className="text-white/50 text-xs ml-auto italic">{saint.imageCredit}</span>
         </div>
       </div>
 
