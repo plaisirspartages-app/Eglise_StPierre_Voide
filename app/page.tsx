@@ -38,176 +38,166 @@ export default function Home() {
   const featured = saints.slice(0, 6);
 
   return (
-    <div>
+    <div className="bg-white">
 
-      {/* ── HERO ─────────────────────────────────────────────── */}
-      <section
-        className="relative text-center overflow-hidden"
-        style={{
-          background: "linear-gradient(180deg, #eef6ff 0%, #fdf8f0 60%, #fdf3dc 100%)",
-          minHeight: "460px",
-        }}
-      >
-        {/* Halo lumineux central */}
+      {/* ── HERO plein écran ─────────────────────────────────── */}
+      <section className="relative overflow-hidden" style={{ minHeight: "90vh" }}>
+        <Image
+          src="/eglise-voide.jpg"
+          alt="Église Saint-Pierre du Voide"
+          fill
+          className="object-cover"
+          priority
+        />
         <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,240,180,0.55) 0%, transparent 75%)",
-          }}
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(160deg, rgba(15,42,26,0.55) 0%, rgba(27,61,42,0.82) 100%)" }}
         />
 
-        <div className="relative max-w-3xl mx-auto px-4 py-16 sm:py-20">
-
-          {/* Grande croix centrale */}
-          <div
-            className="mx-auto mb-6 flex items-center justify-center rounded-full shadow-lg"
-            style={{
-              width: 80,
-              height: 80,
-              background: "linear-gradient(135deg, #c9922a, #e8c060)",
-            }}
-          >
-            <span className="text-white text-4xl" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}>✝</span>
-          </div>
-
-          <h1 className="font-serif font-bold leading-tight mb-2" style={{ fontSize: "clamp(2.2rem, 6vw, 3.8rem)", color: "#3d1a00" }}>
-            Église Saint-Pierre
-          </h1>
-
-          <p className="text-sm tracking-[0.25rem] uppercase mb-6" style={{ color: "#b07830" }}>
-            du Voide · 49310 · Maine-et-Loire
+        <div className="relative h-full flex flex-col items-center justify-center text-center px-4 py-24">
+          <p className="text-green-300 text-xs tracking-[0.35rem] uppercase mb-5 font-medium">
+            Paroisse · 49310 Maine-et-Loire
           </p>
 
-          {/* Ligne décorative */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="flex-1 max-w-[80px] h-px" style={{ background: "linear-gradient(90deg, transparent, #c9922a)" }} />
-            <span style={{ color: "#c9922a", fontSize: "0.6rem", letterSpacing: "0.5rem" }}>✦ ✦ ✦</span>
-            <div className="flex-1 max-w-[80px] h-px" style={{ background: "linear-gradient(90deg, #c9922a, transparent)" }} />
-          </div>
+          <h1
+            className="font-serif font-bold text-white leading-tight mb-5"
+            style={{ fontSize: "clamp(2.8rem, 8vw, 5.5rem)" }}
+          >
+            Église Saint-Pierre<br />
+            <span style={{ color: "#a3d9b1" }}>du Voide</span>
+          </h1>
 
-          <p className="text-lg max-w-lg mx-auto leading-relaxed mb-10" style={{ color: "#6b3a10" }}>
+          <p className="text-white/75 text-lg max-w-md mx-auto mb-10 leading-relaxed">
             Découvrez les saints qui veillent sur notre paroisse
             et testez vos connaissances avec nos jeux.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/saints"
-              className="inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-full shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
-              style={{ background: "linear-gradient(135deg, #c9922a, #e8c060)", color: "#3d1a00" }}
+              className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full transition-all hover:-translate-y-0.5 hover:shadow-xl text-sm"
+              style={{ background: "#a3d9b1", color: "#0e2a1a" }}
             >
               🙏 Découvrir les Saints
             </Link>
             <Link
               href="/jeux"
-              className="inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-full shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg border-2"
-              style={{ borderColor: "#c9922a", color: "#7c3a00", background: "rgba(255,255,255,0.7)" }}
+              className="inline-flex items-center gap-2 font-semibold px-7 py-3.5 rounded-full border transition-all hover:-translate-y-0.5 text-sm"
+              style={{ borderColor: "rgba(163,217,177,0.5)", color: "#d1fae5", background: "rgba(255,255,255,0.08)" }}
             >
-              🎮 Jouer & Apprendre
+              🎮 Jouer &amp; Apprendre
             </Link>
           </div>
         </div>
 
-        {/* Bordure dorée inférieure */}
-        <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, transparent, #c9922a, transparent)" }} />
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
+          <div className="w-px h-8 bg-white/60" />
+          <span className="text-white/60 text-xs tracking-widest uppercase">Découvrir</span>
+        </div>
       </section>
 
-      {/* ── STATS ────────────────────────────────────────────── */}
-      <section style={{ background: "#3a6e49" }}>
-        <div className="max-w-4xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-8 text-green-50">
+      {/* ── STATS flottantes ─────────────────────────────────── */}
+      <section className="max-w-3xl mx-auto px-4 -mt-10 relative z-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[
             { n: "13", label: "Saints" },
             { n: "4",  label: "Jeux" },
             { n: "36", label: "Questions" },
             { n: "3",  label: "Niveaux" },
           ].map(s => (
-            <div key={s.label} className="flex items-center gap-2">
-              <span className="font-serif font-bold text-2xl">{s.n}</span>
-              <span className="text-green-200 text-sm font-medium">{s.label}</span>
+            <div
+              key={s.label}
+              className="bg-white rounded-2xl shadow-lg text-center py-4 px-2"
+              style={{ boxShadow: "0 8px 32px rgba(27,61,42,0.12)" }}
+            >
+              <div className="font-serif font-bold text-2xl" style={{ color: "#1b3d2a" }}>{s.n}</div>
+              <div className="text-xs text-gray-400 mt-0.5 font-medium">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── PRÉSENTATION 3 COLONNES ──────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-4 py-14">
-        <div className="text-center mb-10">
-          <h2 className="font-serif text-3xl font-bold text-amber-900 mb-2">
-            Bienvenue sur notre site
+      {/* ── PITCH 3 COLONNES ─────────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-4 pt-20 pb-16">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-3xl font-bold mb-3" style={{ color: "#1b3d2a" }}>
+            Bienvenue
           </h2>
-          <p className="text-amber-700 max-w-xl mx-auto">
-            L'église Saint-Pierre du Voide, intégrée à la commune de Lys-Haut-Layon, vous ouvre ses portes numériques.
+          <p className="text-gray-500 max-w-lg mx-auto leading-relaxed">
+            L'église Saint-Pierre du Voide, intégrée à la commune de Lys-Haut-Layon,
+            vous ouvre ses portes numériques.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {[
             {
               icon: "🕍",
               title: "Notre église",
-              text: "Dédiée à Saint Pierre, apôtre et premier pape, l'église du Voide est un joyau du patrimoine de Maine-et-Loire, construite sur les fondations d'un édifice plus ancien.",
+              text: "Dédiée à Saint Pierre, apôtre et premier pape, un joyau du patrimoine de Maine-et-Loire.",
+              href: null,
             },
             {
               icon: "🙏",
               title: "Les Saints",
-              text: "Découvrez 13 figures sacrées — de Jeanne d'Arc à sainte Thérèse de Lisieux — avec leurs biographies, patronages, anecdotes et prières.",
+              text: "13 figures sacrées — de Jeanne d'Arc à sainte Thérèse — avec biographies, patronages et prières.",
+              href: "/saints",
             },
             {
               icon: "🎮",
               title: "Jeux & Quiz",
-              text: "4 jeux ludiques pour petits et grands : Quiz, duel Contre la machine, Memory et Pendu. Apprenez en vous amusant !",
+              text: "4 jeux pour petits et grands : Quiz, duel, Memory et Pendu. Apprenez en vous amusant !",
+              href: "/jeux",
             },
           ].map(col => (
-            <div
-              key={col.title}
-              className="flex flex-col items-center text-center gap-3 p-6 rounded-2xl border border-amber-200 bg-amber-50"
-            >
-              <span className="text-5xl">{col.icon}</span>
-              <h3 className="font-serif font-bold text-xl text-amber-900">{col.title}</h3>
-              <p className="text-amber-800 text-sm leading-relaxed">{col.text}</p>
+            <div key={col.title} className="flex flex-col items-start gap-3">
+              <span className="text-4xl">{col.icon}</span>
+              <h3 className="font-serif font-bold text-lg" style={{ color: "#1b3d2a" }}>{col.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{col.text}</p>
+              {col.href && (
+                <Link
+                  href={col.href}
+                  className="text-sm font-medium mt-auto transition-colors"
+                  style={{ color: "#3a6e49" }}
+                >
+                  En savoir plus →
+                </Link>
+              )}
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── PHOTO DE L'ÉGLISE ───────────────────────────────── */}
-      <section className="max-w-5xl mx-auto px-4 pb-14">
-        <div className="relative w-full rounded-3xl overflow-hidden shadow-xl" style={{ height: "clamp(220px, 40vw, 480px)" }}>
-          <Image
-            src="/eglise-voide.jpg"
-            alt="Église Saint-Pierre du Voide"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6">
-            <p className="font-serif text-white text-xl sm:text-2xl font-bold drop-shadow">Église Saint-Pierre du Voide</p>
-            <p className="text-white/80 text-sm drop-shadow">49310 Le Voide · Maine-et-Loire</p>
-          </div>
-        </div>
-      </section>
-
       {/* ── SAINTS EN VEDETTE ────────────────────────────────── */}
-      <section className="py-12 px-4" style={{ background: "#fdf0dc" }}>
+      <section className="py-16 px-4" style={{ background: "#f7faf8" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <p className="text-amber-600 text-xs tracking-[0.3rem] uppercase mb-2">À la une</p>
-            <h2 className="font-serif text-3xl font-bold text-amber-900">
-              Quelques saints de notre église
-            </h2>
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <p className="text-xs tracking-[0.3rem] uppercase mb-1 font-medium" style={{ color: "#3a6e49" }}>À la une</p>
+              <h2 className="font-serif text-2xl font-bold" style={{ color: "#1b3d2a" }}>
+                Quelques saints
+              </h2>
+            </div>
+            <Link
+              href="/saints"
+              className="text-sm font-medium transition-colors hidden sm:block"
+              style={{ color: "#3a6e49" }}
+            >
+              Voir les {saints.length} saints →
+            </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
             {featured.map(saint => (
               <SaintCard key={saint.slug} saint={saint} compact />
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="text-center sm:hidden">
             <Link
               href="/saints"
-              className="inline-flex items-center gap-2 font-semibold px-8 py-3 rounded-full shadow transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 font-semibold px-7 py-3 rounded-full text-sm"
               style={{ background: "#1b3d2a", color: "#fff" }}
             >
               Voir les {saints.length} saints →
@@ -217,40 +207,34 @@ export default function Home() {
       </section>
 
       {/* ── JEUX ─────────────────────────────────────────────── */}
-      <section
-        className="py-14 px-4"
-        style={{ background: "linear-gradient(160deg, #0e2a1a 0%, #1b3d2a 100%)" }}
-      >
+      <section className="py-16 px-4" style={{ background: "linear-gradient(160deg, #0e2a1a 0%, #1b3d2a 100%)" }}>
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-green-400 text-xs tracking-[0.3rem] uppercase mb-2">Apprendre en jouant</p>
-            <h2 className="font-serif text-3xl font-bold text-white mb-2">Jeux & Quiz</h2>
-            <p className="text-green-300">
-              Pour toute la famille — seul ou contre la machine !
-            </p>
+          <div className="mb-10">
+            <p className="text-green-400 text-xs tracking-[0.3rem] uppercase mb-2 font-medium">Apprendre en jouant</p>
+            <h2 className="font-serif text-3xl font-bold text-white">Jeux &amp; Quiz</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {jeux.map(jeu => (
               <Link
                 key={jeu.href}
                 href={jeu.href}
-                className={`group flex items-center gap-5 ${jeu.color} text-white rounded-2xl p-5 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl`}
+                className={`group flex items-center gap-4 ${jeu.color} text-white rounded-2xl p-5 transition-all hover:-translate-y-1 hover:shadow-xl`}
               >
-                <span className="text-5xl shrink-0">{jeu.emoji}</span>
+                <span className="text-4xl shrink-0">{jeu.emoji}</span>
                 <div>
-                  <p className="font-serif font-bold text-xl">{jeu.label}</p>
-                  <p className="text-white/70 text-sm mt-0.5">{jeu.desc}</p>
+                  <p className="font-semibold text-base">{jeu.label}</p>
+                  <p className="text-white/60 text-xs mt-0.5">{jeu.desc}</p>
                 </div>
-                <span className="ml-auto text-white/40 group-hover:text-white transition-colors text-xl">→</span>
+                <span className="ml-auto text-white/30 group-hover:text-white transition-colors">→</span>
               </Link>
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="mt-8">
             <Link
               href="/jeux"
-              className="inline-flex items-center gap-2 text-green-300 hover:text-green-100 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-green-300 hover:text-white transition-colors text-sm font-medium"
             >
               Voir tous les jeux →
             </Link>
@@ -259,14 +243,13 @@ export default function Home() {
       </section>
 
       {/* ── CITATION ─────────────────────────────────────────── */}
-      <section className="py-12 px-4 text-center bg-white">
+      <section className="py-20 px-4 text-center">
         <div className="max-w-2xl mx-auto">
-          <p className="text-amber-400 text-4xl mb-4 select-none">"</p>
-          <blockquote className="font-serif text-xl text-amber-900 italic leading-relaxed mb-4">
-            Tu es Pierre, et sur cette pierre je bâtirai mon Église,
-            et les portes de l'Hadès ne tiendront pas contre elle.
-          </blockquote>
-          <p className="text-amber-600 text-sm">— Matthieu 16, 18</p>
+          <p className="font-serif mb-6 italic leading-relaxed" style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", color: "#2d4a36" }}>
+            « Tu es Pierre, et sur cette pierre je bâtirai mon Église,
+            et les portes de l'Hadès ne tiendront pas contre elle. »
+          </p>
+          <p className="text-gray-400 text-sm tracking-wide">Matthieu 16, 18</p>
         </div>
       </section>
 
