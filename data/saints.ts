@@ -32,7 +32,7 @@ export const saints: Saint[] = [
     prayer: "Seigneur Jésus, tu es le chemin, la vérité et la vie. Guide nos pas sur la route qui mène au Père. Amen.",
     color: "from-amber-700 to-amber-900",
     emoji: "✝️",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Salvator_Mundi%2C_Leonardo_da_Vinci%2C_circa_1500.jpg/320px-Salvator_Mundi%2C_Leonardo_da_Vinci%2C_circa_1500.jpg",
+    image: "/saints/jesus-christ.jpg",
     imageCredit: "Léonard de Vinci, vers 1500 — Domaine public"
   },
   {
@@ -52,7 +52,7 @@ export const saints: Saint[] = [
     prayer: "Je vous salue Marie, pleine de grâce, le Seigneur est avec vous. Vous êtes bénie entre toutes les femmes, et Jésus, le fruit de vos entrailles, est béni. Sainte Marie, Mère de Dieu, priez pour nous, pauvres pécheurs, maintenant et à l'heure de notre mort. Amen.",
     color: "from-blue-600 to-blue-900",
     emoji: "🌹",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tempi_Madonna_-_Raphael.jpg/320px-Tempi_Madonna_-_Raphael.jpg",
+    image: "/saints/vierge-marie.jpg",
     imageCredit: "Raphaël, Tempi Madonna, 1508 — Domaine public"
   },
   {
@@ -92,7 +92,7 @@ export const saints: Saint[] = [
     prayer: "Saint Antoine, toi qui es invoqué pour retrouver ce qui est perdu, aide-moi à ne jamais perdre la foi ni l'espérance. Intercède pour les pauvres et les oubliés. Amen.",
     color: "from-orange-600 to-orange-900",
     emoji: "📖",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/AntoniusGreco17.jpg/320px-AntoniusGreco17.jpg",
+    image: "/saints/saint-antoine.jpg",
     imageCredit: "El Greco, vers 1580 — Domaine public"
   },
   {
@@ -132,7 +132,7 @@ export const saints: Saint[] = [
     prayer: "Saint Jean Baptiste, toi qui as crié dans le désert 'Préparez les chemins du Seigneur', aide-nous à nous convertir et à accueillir le Christ dans nos cœurs. Amen.",
     color: "from-yellow-600 to-yellow-900",
     emoji: "🐑",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Caravage_-_Saint_Jean_Baptiste.jpg/320px-Caravage_-_Saint_Jean_Baptiste.jpg",
+    image: "/saints/saint-jean-baptiste.jpg",
     imageCredit: "Caravage, 1594–1595 — Domaine public"
   },
   {
@@ -152,7 +152,7 @@ export const saints: Saint[] = [
     prayer: "Saint Pierre, toi qui gardes les portes du Royaume et qui fus le roc de l'Église, affermis notre foi vacillante comme Jésus a affermi la tienne. Amen.",
     color: "from-slate-500 to-slate-800",
     emoji: "🗝️",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/El_Greco_-_St._Peter_-_Google_Art_Project.jpg/320px-El_Greco_-_St._Peter_-_Google_Art_Project.jpg",
+    image: "/saints/saint-pierre.jpg",
     imageCredit: "El Greco — Domaine public"
   },
   {
@@ -172,7 +172,7 @@ export const saints: Saint[] = [
     prayer: "Saint Louis, roi de justice et de charité, toi qui as gouverné ton peuple avec sagesse et humilité, intercède pour nos gouvernants et pour la France. Amen.",
     color: "from-purple-600 to-purple-900",
     emoji: "👑",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Saint_Louis_IX_by_El_Greco.jpg/320px-Saint_Louis_IX_by_El_Greco.jpg",
+    image: "/saints/saint-louis.jpg",
     imageCredit: "El Greco, vers 1590 — Domaine public"
   },
   {
@@ -232,7 +232,7 @@ export const saints: Saint[] = [
     prayer: "Sainte Anne, toi qui as éduqué Marie avec tant d'amour et de foi, aide tous les parents et grands-parents à transmettre la foi à leurs enfants et petits-enfants. Amen.",
     color: "from-rose-600 to-rose-900",
     emoji: "📿",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/La_Vierge%2C_l%27Enfant_J%C3%A9sus_et_sainte_Anne%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg/320px-La_Vierge%2C_l%27Enfant_J%C3%A9sus_et_sainte_Anne%2C_by_Leonardo_da_Vinci%2C_from_C2RMF.jpg",
+    image: "/saints/sainte-anne.jpg",
     imageCredit: "Léonard de Vinci, 1503–1519 — Domaine public"
   },
   {
