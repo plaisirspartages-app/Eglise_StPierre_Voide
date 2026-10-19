@@ -29,7 +29,7 @@ const jeux = [
     label: "Le Pendu",
     desc: "Devinez le saint",
     href: "/jeux/pendu",
-    color: "bg-green-800 hover:bg-green-700",
+    color: "bg-violet-800 hover:bg-violet-700",
   },
 ];
 
@@ -41,45 +41,50 @@ export default function Home() {
 
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section
-        className="relative text-white text-center overflow-hidden"
+        className="relative text-center overflow-hidden"
         style={{
-          background: "linear-gradient(160deg, #5c2e00 0%, #7c3a00 40%, #4a1a00 100%)",
-          minHeight: "480px",
+          background: "linear-gradient(180deg, #eef6ff 0%, #fdf8f0 60%, #fdf3dc 100%)",
+          minHeight: "460px",
         }}
       >
-        {/* Motif de fond */}
+        {/* Halo lumineux central */}
         <div
-          className="absolute inset-0 opacity-5 pointer-events-none select-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
-            backgroundSize: "20px 20px",
+            background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,240,180,0.55) 0%, transparent 75%)",
           }}
         />
 
-        {/* Bordure dorée supérieure */}
-        <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, transparent, #d4a843, transparent)" }} />
+        <div className="relative max-w-3xl mx-auto px-4 py-16 sm:py-20">
 
-        <div className="relative max-w-3xl mx-auto px-4 py-20">
-          {/* Ornement haut */}
-          <p className="text-amber-400 text-2xl tracking-[1rem] mb-6 select-none">✦ ✦ ✦</p>
+          {/* Grande croix centrale */}
+          <div
+            className="mx-auto mb-6 flex items-center justify-center rounded-full shadow-lg"
+            style={{
+              width: 80,
+              height: 80,
+              background: "linear-gradient(135deg, #c9922a, #e8c060)",
+            }}
+          >
+            <span className="text-white text-4xl" style={{ textShadow: "0 1px 4px rgba(0,0,0,0.3)" }}>✝</span>
+          </div>
 
-          <h1 className="font-serif text-5xl sm:text-6xl font-bold mb-3 leading-tight" style={{ textShadow: "0 2px 12px rgba(0,0,0,0.5)" }}>
-            Église<br />
-            <span style={{ color: "#f0c060" }}>Saint-Pierre</span>
+          <h1 className="font-serif font-bold leading-tight mb-2" style={{ fontSize: "clamp(2.2rem, 6vw, 3.8rem)", color: "#3d1a00" }}>
+            Église Saint-Pierre
           </h1>
 
-          <p className="text-amber-200 text-xl mt-3 mb-1 tracking-widest uppercase text-sm">
-            du Voide — 49310 · Maine-et-Loire
+          <p className="text-sm tracking-[0.25rem] uppercase mb-6" style={{ color: "#b07830" }}>
+            du Voide · 49310 · Maine-et-Loire
           </p>
 
           {/* Ligne décorative */}
-          <div className="flex items-center justify-center gap-3 my-6">
-            <div className="flex-1 max-w-[100px] h-px" style={{ background: "linear-gradient(90deg, transparent, #d4a843)" }} />
-            <span className="text-amber-400 text-xl">✝</span>
-            <div className="flex-1 max-w-[100px] h-px" style={{ background: "linear-gradient(90deg, #d4a843, transparent)" }} />
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="flex-1 max-w-[80px] h-px" style={{ background: "linear-gradient(90deg, transparent, #c9922a)" }} />
+            <span style={{ color: "#c9922a", fontSize: "0.6rem", letterSpacing: "0.5rem" }}>✦ ✦ ✦</span>
+            <div className="flex-1 max-w-[80px] h-px" style={{ background: "linear-gradient(90deg, #c9922a, transparent)" }} />
           </div>
 
-          <p className="text-amber-100 text-lg max-w-xl mx-auto leading-relaxed mb-10">
+          <p className="text-lg max-w-lg mx-auto leading-relaxed mb-10" style={{ color: "#6b3a10" }}>
             Découvrez les saints qui veillent sur notre paroisse
             et testez vos connaissances avec nos jeux.
           </p>
@@ -87,14 +92,15 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/saints"
-              className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-full shadow-lg transition-all hover:-translate-y-0.5"
-              style={{ background: "#d4a843", color: "#3d1a00" }}
+              className="inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-full shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              style={{ background: "linear-gradient(135deg, #c9922a, #e8c060)", color: "#3d1a00" }}
             >
               🙏 Découvrir les Saints
             </Link>
             <Link
               href="/jeux"
-              className="inline-flex items-center gap-2 font-semibold px-8 py-4 rounded-full border-2 border-amber-400 text-amber-100 hover:bg-amber-400/20 transition-all hover:-translate-y-0.5 shadow-lg"
+              className="inline-flex items-center justify-center gap-2 font-semibold px-8 py-4 rounded-full shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg border-2"
+              style={{ borderColor: "#c9922a", color: "#7c3a00", background: "rgba(255,255,255,0.7)" }}
             >
               🎮 Jouer & Apprendre
             </Link>
@@ -102,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Bordure dorée inférieure */}
-        <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, transparent, #d4a843, transparent)" }} />
+        <div className="absolute bottom-0 left-0 right-0 h-1" style={{ background: "linear-gradient(90deg, transparent, #c9922a, transparent)" }} />
       </section>
 
       {/* ── STATS ────────────────────────────────────────────── */}
