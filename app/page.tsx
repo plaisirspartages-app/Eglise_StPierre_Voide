@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { saints } from "@/data/saints";
 import SaintCard from "@/components/SaintCard";
 
@@ -166,6 +167,24 @@ export default function Home() {
               <p className="text-amber-800 text-sm leading-relaxed">{col.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── PHOTO DE L'ÉGLISE ───────────────────────────────── */}
+      <section className="max-w-5xl mx-auto px-4 pb-14">
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-xl" style={{ height: "clamp(220px, 40vw, 480px)" }}>
+          <Image
+            src="/eglise-voide.jpg"
+            alt="Église Saint-Pierre du Voide"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <p className="font-serif text-white text-xl sm:text-2xl font-bold drop-shadow">Église Saint-Pierre du Voide</p>
+            <p className="text-white/80 text-sm drop-shadow">49310 Le Voide · Maine-et-Loire</p>
+          </div>
         </div>
       </section>
 
