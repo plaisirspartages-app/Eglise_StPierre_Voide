@@ -33,7 +33,7 @@ export const saints: Saint[] = [
     color: "from-amber-700 to-amber-900",
     emoji: "✝️",
     image: "/saints/jesus-christ.jpg",
-    imageCredit: "Léonard de Vinci, vers 1500 — Domaine public"
+    imageCredit: "École de Rembrandt, XVIIe s. — The Met, Domaine public"
   },
   {
     slug: "vierge-marie",
@@ -53,7 +53,7 @@ export const saints: Saint[] = [
     color: "from-blue-600 to-blue-900",
     emoji: "🌹",
     image: "/saints/vierge-marie.jpg",
-    imageCredit: "Raphaël, Tempi Madonna, 1508 — Domaine public"
+    imageCredit: "Fra Filippo Lippi, vers 1440 — The Met, Domaine public"
   },
   {
     slug: "notre-dame-lourdes",
