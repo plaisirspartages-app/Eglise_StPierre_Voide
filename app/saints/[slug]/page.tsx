@@ -34,12 +34,13 @@ export default async function SaintPage({ params }: { params: Promise<{ slug: st
 
       {/* En-tête */}
       <div className={`rounded-3xl bg-gradient-to-br ${saint.color} text-white mb-8 overflow-hidden`}>
-        <div className="relative w-full h-64 sm:h-80">
+        <div className="relative w-full">
           <Image
             src={saint.image}
             alt={saint.name}
-            fill
-            className="object-cover"
+            width={800}
+            height={1067}
+            className="w-full h-auto block"
             unoptimized={saint.image.startsWith("http")}
             priority
           />
