@@ -68,7 +68,7 @@ export default function Home() {
           </h1>
 
           <p className="text-white/75 text-lg max-w-md mx-auto mb-10 leading-relaxed">
-            Découvrez les saints qui veillent sur notre paroisse
+            Découvrez les saints qui veillent sur notre relais
             et testez vos connaissances avec nos jeux.
           </p>
 
@@ -135,7 +135,7 @@ export default function Home() {
             {
               icon: "🕍",
               title: "Notre église",
-              text: "Dédiée à Saint Pierre, apôtre et premier pape, un joyau du patrimoine de Maine-et-Loire.",
+              text: "Dédiée à Saint Pierre, apôtre et premier pape. Le clocher de l'église du Voide a la particularité de ne pas avoir de flèche. Il s'arrête à la plateforme.",
               href: null,
             },
             {

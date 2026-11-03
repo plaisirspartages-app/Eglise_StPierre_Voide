@@ -33,7 +33,7 @@ export const saints: Saint[] = [
     color: "from-amber-700 to-amber-900",
     emoji: "✝️",
     image: "/saints/jesus-christ.jpg",
-    imageCredit: "École de Rembrandt, XVIIe s. — The Met, Domaine public"
+    imageCredit: "Statue du Sacré Cœur, Église Saint-Pierre du Voide"
   },
   {
     slug: "vierge-marie",
@@ -53,7 +53,7 @@ export const saints: Saint[] = [
     color: "from-blue-600 to-blue-900",
     emoji: "🌹",
     image: "/saints/vierge-marie.jpg",
-    imageCredit: "Fra Filippo Lippi, vers 1440 — The Met, Domaine public"
+    imageCredit: "Statue de la Vierge à l'Enfant, Église Saint-Pierre du Voide"
   },
   {
     slug: "notre-dame-lourdes",
@@ -73,7 +73,7 @@ export const saints: Saint[] = [
     color: "from-sky-500 to-sky-800",
     emoji: "💧",
     image: "/saints/notre-dame-lourdes.jpg",
-    imageCredit: "Virgilio Tojetti, 1877 — Domaine public"
+    imageCredit: "Statue de Notre-Dame de Lourdes, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-antoine-padoue",
@@ -93,7 +93,7 @@ export const saints: Saint[] = [
     color: "from-orange-600 to-orange-900",
     emoji: "📖",
     image: "/saints/saint-antoine.jpg",
-    imageCredit: "El Greco, vers 1580 — Domaine public"
+    imageCredit: "Statue de Saint Antoine de Padoue, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-christophe",
@@ -113,7 +113,7 @@ export const saints: Saint[] = [
     color: "from-green-600 to-green-900",
     emoji: "🚗",
     image: "/saints/saint-christophe.jpg",
-    imageCredit: "Joachim Patinir, vers 1520 — Domaine public"
+    imageCredit: "Statue de Saint Christophe, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-jean-baptiste",
@@ -133,7 +133,7 @@ export const saints: Saint[] = [
     color: "from-yellow-600 to-yellow-900",
     emoji: "🐑",
     image: "/saints/saint-jean-baptiste.jpg",
-    imageCredit: "Caravage, 1594–1595 — Domaine public"
+    imageCredit: "Statue de Saint Jean Baptiste, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-pierre",
@@ -153,7 +153,7 @@ export const saints: Saint[] = [
     color: "from-slate-500 to-slate-800",
     emoji: "🗝️",
     image: "/saints/saint-pierre.jpg",
-    imageCredit: "El Greco — Domaine public"
+    imageCredit: "Statue de Saint Pierre, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-louis",
@@ -173,7 +173,7 @@ export const saints: Saint[] = [
     color: "from-purple-600 to-purple-900",
     emoji: "👑",
     image: "/saints/saint-louis.jpg",
-    imageCredit: "El Greco, vers 1590 — Domaine public"
+    imageCredit: "Statue de Saint Louis, Église Saint-Pierre du Voide"
   },
   {
     slug: "jeanne-arc",
@@ -193,7 +193,7 @@ export const saints: Saint[] = [
     color: "from-red-600 to-red-900",
     emoji: "⚔️",
     image: "/saints/jeanne-arc.jpg",
-    imageCredit: "Albert Lynch, 1903 — Domaine public"
+    imageCredit: "Statue de Sainte Jeanne d'Arc, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-joseph",
@@ -213,7 +213,7 @@ export const saints: Saint[] = [
     color: "from-stone-500 to-stone-800",
     emoji: "🔨",
     image: "/saints/saint-joseph.jpg",
-    imageCredit: "Murillo, vers 1670–1675 — Domaine public"
+    imageCredit: "Statue de Saint Joseph et l'Enfant Jésus, Église Saint-Pierre du Voide"
   },
   {
     slug: "sainte-anne",
@@ -233,7 +233,7 @@ export const saints: Saint[] = [
     color: "from-rose-600 to-rose-900",
     emoji: "📿",
     image: "/saints/sainte-anne.jpg",
-    imageCredit: "Léonard de Vinci, 1503–1519 — Domaine public"
+    imageCredit: "Statue de Sainte Anne, Église Saint-Pierre du Voide"
   },
   {
     slug: "sainte-therese-lisieux",
@@ -253,7 +253,7 @@ export const saints: Saint[] = [
     color: "from-pink-500 to-pink-800",
     emoji: "🌺",
     image: "/saints/sainte-therese.jpg",
-    imageCredit: "Photo de Céline Martin, 1895 — Domaine public"
+    imageCredit: "Statue de Sainte Thérèse de Lisieux, Église Saint-Pierre du Voide"
   },
   {
     slug: "saint-benoit",
@@ -272,8 +272,8 @@ export const saints: Saint[] = [
     prayer: "Saint Benoît, toi qui as centré ta vie sur Dieu et organisé le monde autour de la prière et du travail, aide-nous à mettre Dieu au cœur de notre quotidien. Amen.",
     color: "from-gray-600 to-gray-900",
     emoji: "📜",
-    image: "/saints/saint-benoit.png",
-    imageCredit: "Maso da San Friano, XVIe siècle — Domaine public"
+    image: "/saints/saint-benoit.jpg",
+    imageCredit: "Statue de Saint Benoît, Église Saint-Pierre du Voide"
   }
 ];
 
