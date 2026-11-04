@@ -17,7 +17,7 @@ export interface Saint {
 export const saints: Saint[] = [
   {
     slug: "jesus-christ",
-    name: "Le Christ",
+    name: "Le Sacré Coeur de Jésus",
     subtitle: "Fils de Dieu, Sauveur du monde",
     feastDate: "25 décembre (Noël) • Pâques (résurrection)",
     patronOf: ["L'humanité entière", "L'Église universelle"],
